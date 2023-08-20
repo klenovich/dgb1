@@ -35,7 +35,6 @@ passport.use(
         done(null, userGoogle);
       } else {
         let username = profile.name.givenName.trim();
-
         if (profile.name.familyName) {
           username = `${username} ${profile.name.familyName.trim()}`;
         }
